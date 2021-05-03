@@ -1,0 +1,74 @@
+<meta charset = "UTF-8">
+<input>
+<button>compare com o meu segredo</button>
+
+<script>
+
+	function sorteia() {
+		return Math.round(Math.random()*10);
+	}
+
+	function sorteiaNumeros (quantidade) {
+		//array
+		var segredos = [];
+		var numero = 1;
+		while (numero <= quantidade){
+				var numeroAleatorio = sorteia();
+                var achou = false;
+                if (numeroAleatorio !== 0) { //não sortear número aleatório e nem o 
+                    for (var posicao = 0; posicao < segredos.length; posicao++){
+				        if(segredos[posicao] == numeroAleatorio) {
+					       achou = true;
+					           break;
+				            }
+			         } //percorrer lista
+
+				        if (achou==false) {
+					       segredos.push(numeroAleatorio);
+					            numero++;
+					       }
+			     }
+		}
+			
+		  return segredos;
+		//var só existe dentro da função
+	}
+	var segredos = sorteiaNumeros(3);
+
+	//novo tipo de dado:  array/vetor
+	//conteúdo [] e vírgula
+	//posição
+	//primeira posição do array é 0 (índice)
+	//percorrer cada item do array 
+
+	var input = document.querySelector("input"); //usar a tag input do html no mundo JS 
+	input.focus();
+
+	function verifica() { //função para comparar com o segredo 
+		var achou = false;
+		for (var posicao = 0; posicao < segredos.length; posicao++) { //quantas posições tem (5), para não ter que por número no for, pode colocar como .length, quantidade de elementos que existem 
+
+			if (input.value == segredos[posicao]) { //comparar segredos com posição
+				    alert ("você acertou");
+				    achou = true;
+				    break; //caso acertar o número //para o loop
+			 }
+		}
+		      if (achou == false) {
+			         alert ("Você errou");
+		}
+		
+		input.value = "";
+		//input.focus();
+	}
+
+
+	//button.onclick = verifica;
+	//no click do botão dpo mouse funciona a execução de uma função
+
+	var button =  document.querySelector("button");
+	//associar a função 
+	</script>
+
+
+    

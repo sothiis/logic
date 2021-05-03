@@ -1,0 +1,38 @@
+<meta charset="UTF-8">
+
+<script>
+
+	function puloLinha() {
+
+		document.write("<br>");   //shortcut for other instructions to make the program easier to see/write
+	}
+
+    function mostra(frase)  { //parameter it's needed to put a name, a sentence 
+        document.write(frase); //function that receives a parameter
+        puloLinha(); //add another function inside a function
+        //tiny functions to create bigger things
+    }
+
+    //document.write("Olá");
+    // mostra("Olá");
+    //puloLinha();
+
+    var ano = 2016;
+
+    mostra("Flávio tem " + (ano - 1977) + " anos");
+    
+   // puloLinha(); //it's needed to put ()  when using a function
+
+    mostra("Joaquim tem " + (ano - 1996) + " anos");
+    //puloLinha();
+    
+    ano = 2017;
+
+    mostra("Barney tem " + (ano - 1976) + " anos");
+
+    //puloLinha();
+
+ 
+</script>
+
+

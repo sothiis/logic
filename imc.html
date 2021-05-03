@@ -1,0 +1,53 @@
+<meta charset="UTF-8">
+
+<script>
+	//every program will have this estructure
+
+	function pulaLinha(){
+
+		document.write("<br>");
+		document.write("<br>");
+	}
+
+	function mostra(frase) {
+
+		document.write(frase);
+		pulaLinha();
+	}
+
+	function calculaImc(altura, peso){
+
+		//var imc = peso / (altura * altura);
+		return peso / (altura * altura);
+		//return imc;
+		//what it's needed to be returned to the user
+		//var imc2 = peso2 / (altura2 * altura2);
+		//var imcTotal = imc1 + imc2;
+		//mostra("O imc calculado é " + imc);
+		//mostra("A soma dos imc é " + imcTotal);
+		//don't use mostra in the fuction
+	}
+
+		//var pesoBella = 55;
+		//var alturaBella = 1.55;
+		//var imcBella = pesoBella / (alturaBella * alturaBella);
+		//mostra("O imc da Bella é " + imcBella);
+		var imcBella = calculaImc(1.55, 55);
+		// variable receives calculaimc and calculates it 
+
+		//var pesoPaxx = 80;
+		//var alturaPaxx = 1.70;
+		//var imcPaxx = pesoPaxx / (alturaPaxx * alturaPaxx);
+		//mostra("O imc do Paxx é " + imcPaxx);
+		var imcPaxx = calculaImc(1.70, 80);
+		var imcTotal = imcBella + imcPaxx;
+
+		//mostra(imcPaxx);
+		//mostra(imcBella);
+
+
+		document.write("A soma dos IMC é " + imcTotal);
+
+
+</script>
+

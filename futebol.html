@@ -1,0 +1,51 @@
+<meta charset="UTF-8">
+
+<script>
+	
+	function skipLine() {
+		document.write("<br");
+		document.write("<br");
+	}
+
+	function display(sentence) {
+		document.write(sentence);
+		skipLine();
+	}
+
+	//soccer
+	var wins = parseInt(prompt("Enter the number of win games"));
+	//var reads text/string only
+	//convert text into number var number = parseInt() = JS function
+	var ties = parseInt (prompt("Enter the numer of tie games"));
+	var points = wins * 3 + ties;
+
+	alert("Your team has " + points + " points");
+
+	//1 win  = 3 points
+	//1 tie = 1 point
+
+	//your team is better than last year, same as last year, worse than last year
+	//*********** 
+	//comparasion 
+	
+	//condition
+	//*********
+	//true or false
+	//if point bigger than 28 
+	if (points > 28) {
+		alert("Your team is doing better than last year");
+	}
+
+	if (points < 28) {
+	//if points are less than 28
+		alert("Your team is doing worse than last year");
+	}
+
+	if (points == 28) {
+	// ==
+	//if points are the same as 28
+		alert("Your team is doing the same as last year");
+	}
+
+	alert("Bye bye");
+</script>
